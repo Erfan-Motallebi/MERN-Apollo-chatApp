@@ -15,6 +15,10 @@ function SinglePost(props) {
     },
   });
 
+  const DeletePostFunc = () => {
+    props.history.push("/");
+  };
+
   const relativeTime = require("dayjs/plugin/relativeTime");
   dayjs.extend(relativeTime);
 
@@ -64,7 +68,9 @@ function SinglePost(props) {
                   content: commentCount,
                 }}
               />
-              {user && user.username === username && <DeletePost postId={id} />}
+              {user && user.username === username && (
+                <DeletePost postId={id} callBack={DeletePostFunc} />
+              )}
             </Card.Content>
           </Card>
         </Grid.Column>

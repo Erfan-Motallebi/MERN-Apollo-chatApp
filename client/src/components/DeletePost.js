@@ -3,9 +3,12 @@ import React, { useState } from "react";
 import { Button, Icon, Modal, Header } from "semantic-ui-react";
 import { POST_DELETE_QUERY } from "../query/post";
 
-function DeletePost({ postId }) {
+function DeletePost({ postId, callBack }) {
   const [open, setOpen] = useState(false);
   const [deletePostQuery, { error }] = useMutation(POST_DELETE_QUERY, {
+    update() {
+      if (callBack) callBack();
+    },
     variables: {
       postId,
     },

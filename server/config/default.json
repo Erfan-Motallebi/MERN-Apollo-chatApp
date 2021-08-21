@@ -1,0 +1,9 @@
+{
+  "dbConfig": {
+    "url": "mongodb://localhost:27017/mern-apollo"
+  },
+  "passwordSalt": 10,
+  "JWT": {
+    "SECRET_KEY": "User Bearer access token authentication"
+  }
+}

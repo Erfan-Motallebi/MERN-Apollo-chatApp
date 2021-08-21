@@ -1,0 +1,31 @@
+:root {
+  --icon-color: #000300;
+}
+
+.aiChat {
+  font-size: 2rem;
+  color: var(--icon-color);
+}
+
+.recent {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.recent--middle {
+  justify-content: center !important;
+}
+
+.card {
+  margin: 10px 0 0 !important;
+}
+
+.form-control {
+  width: 500px;
+  margin: 50px auto;
+}
+
+:is(.error, .success) {
+  width: 500px;
+  margin: 10px auto;
+}
